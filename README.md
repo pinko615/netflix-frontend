@@ -138,6 +138,15 @@ tokeninterceptor.service.ts
 ## Screenshots 📷
 
 Login
+
+![netflix-angular3](http://pink0.online/netflix3.jpg)
+
+Home
+
+![netflix-angular3](http://pink0.online/netflix3.jpg)
+
+Movies
+
 ![netflix-angular3](http://pink0.online/netflix3.jpg)
 
 ## Author ✒️
