@@ -122,38 +122,15 @@ auth.service.ts
   }
 ```
 ```
-movie.service.ts
+tokeninterceptor.service.ts
 
-  getMovies() {
-    return this.http.get<any>(this.listMovieUrl);
-  }
-
-  getListActors() {
-    return this.http.get<any>(this.insertActorsUrl);
-  }
-
-  getPopularMovies() {
-    return this.http.get<any>(this.listPopularMovieUrl);
-  }
-
-  getPremiereMovies() {
-    return this.http.get<any>(this.listPremiereMovieUrl);
-  }
-
-  getMainPopularMovies() {
-    return this.http.get<any>(this.listMainPopularUrl);
-  }
-
-  getMainPopular() {
-    return this.http.get<any>(this.listMainPopular);
-  }
-
-  getMainHome() {
-    return this.http.get<any>(this.listMainHomeUrl);
-  }
-
-  getMainPremiere() {
-    return this.http.get<any>(this.listMainPremiereUrl);
+  intercept(req, next) {
+    const tokenReq = req.clone({
+      setHeaders: {
+        Authorization: 'Bearer ' + this.authService.getToken()
+      }
+    });
+    return next.handle(tokenReq);
   }
 
 ```
