@@ -145,9 +145,9 @@ Home
 
 ![netflix-angular3](http://pink0.online/netflix3.jpg)
 
-Movies
+Movies by genre
 
-![netflix-angular3](http://pink0.online/netflix3.jpg)
+![netflix-angular3](http://pink0.online/netflix4.jpg)
 
 ## Author ✒️
 
