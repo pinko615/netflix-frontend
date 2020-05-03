@@ -48,7 +48,8 @@ _v1.0_
 ## Dependencies ⚙️
 
 ```
-"@angular/animations": "~9.1.0",
+"dependencies": {
+    "@angular/animations": "~9.1.0",
     "@angular/common": "~9.1.0",
     "@angular/compiler": "~9.1.0",
     "@angular/core": "~9.1.0",
@@ -62,6 +63,7 @@ _v1.0_
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
+  }
 ```
 ```
 npm install
