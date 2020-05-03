@@ -143,7 +143,7 @@ Login
 
 Home
 
-![netflix-angular3](http://pink0.online/netflix3.jpg)
+![netflix-angular3](http://pink0.online/netflix5.jpg)
 
 Movies by genre
 
