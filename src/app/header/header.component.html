@@ -12,13 +12,9 @@
               <img src="../../assets/avatar.svg" width="35px">
             </button>
             <div class="dropdown-menu">
-              <!-- menu si es usuario -->
               <a class="dropdown-item drop" routerLink="profile">Profile</a>
               <a class="dropdown-item drop" routerLink="my-orders">My Orders</a>
-              <!-- menu si es admin -->
-              <!-- <div [hidden]="user.role == 'Admin'"> -->
               <a class="dropdown-item drop" routerLink="admin/upload">Admin</a>
-            <!-- </div> -->
               <div class="dropdown-divider"></div>
               <a class="dropdown-item drop sign-out" (click)="authService.logoutUser()">Sign Out</a>
             </div>
@@ -27,7 +23,7 @@
       </div>
 </header>
 <!-- header without login -->
-<header *ngIf="">
+<header *ngIf="!authService.isLogged()">
   <div class="container">
       <a routerLink="/"><img src="../../assets/logo.png" alt="logo" class="logo"></a>
       <nav>
