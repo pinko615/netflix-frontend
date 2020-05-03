@@ -40,14 +40,49 @@
         </div>
     </div>
 </div>
-<!-- recommended movies -->
-<!-- <div class="container">
+<div class="container">
     <div class="container-title-control">
-        <h3>Recommended Movies</h3>
-        <div>
-            <a routerLink="movies">
-                <p class="view-all"> View all Movies <i class="fas fa-arrow-right"></i></p>
+        <h3>Similar movies</h3>
+    </div>
+    <div id="multi-item-comedy" class="carousel slide carousel-multi-item" data-ride="carousel">
+        <div class="carousel-inner">
+            <!--first slide-->
+            <div class="carousel-item active">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movieGenreComedy of moviesGenreComedy; let i = index">
+                        <div *ngIf="i < 6">
+                            <div class="card mb-2">
+                                <a [routerLink]="['/movie', movieGenreComedy._id]">
+                                    <img class="card-img-top" src="{{movieGenreComedy.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>          
+            </div>
+            <!--second slide-->
+            <div class="carousel-item">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movieGenreComedy of moviesGenreComedy; let i = index">
+                        <div *ngIf="i >= 6 && i < 12">
+                            <div class="card mb-2">
+                                <a [routerLink]="['/movie', movieGenreComedy._id]">
+                                    <img class="card-img-top" src="{{movieGenreComedy.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>             
+            </div>
+        </div>
+        <!-- controls -->
+        <div class="controls-bottom">
+            <a class="btn" href="#multi-item-comedy" data-slide="prev">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="btn" href="#multi-item-comedy" data-slide="next">
+                <i class="fa fa-chevron-right"></i>
             </a>
         </div>
     </div>
-</div> -->
+</div>

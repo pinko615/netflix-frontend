@@ -11,6 +11,7 @@ import { MovieDescription } from 'src/app/interfaces/movie-description';
 export class MovieComponent implements OnInit {
 
   // movie: MovieDescription;
+  moviesGenreComedy      = [];
 
   movie: any = {
            genre: Object,
@@ -38,7 +39,9 @@ export class MovieComponent implements OnInit {
 
   ngOnInit(): void {
 
-      this.route.params
+    this.getListMoviesGenreComedy();
+
+    this.route.params
       .subscribe(parametros => {
         console.log(parametros.id);
         this.movieService.getMovieId(parametros.id)
@@ -51,5 +54,16 @@ export class MovieComponent implements OnInit {
         );
       });
      }
+
+     getListMoviesGenreComedy(){
+      // cuando se inicializa el componente lanzamos la petición
+      this.movieService.getMoviesGenreComedy()
+        .subscribe(
+          res => {
+            this.moviesGenreComedy = res;
+          },
+          err => console.log(err)
+        );
+    }
 }
 
