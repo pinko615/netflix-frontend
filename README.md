@@ -41,12 +41,12 @@ v1.0
 
 ## Developed with 🛠️
 
-* [VSCode]
-* [Angular]
-* [Typescript]
-* [Node]
-* [Bootstrap]
-* [GitHub]
+* [VSCode] https://code.visualstudio.com/
+* [Angular CLI] https://cli.angular.io/ 
+* [Typescript] https://www.typescriptlang.org/
+* [Node] https://nodejs.org/es/
+* [Bootstrap] https://getbootstrap.com/
+* [GitHub] https://github.com/
 
 ## Dependencies ⚙️
 
@@ -134,6 +134,11 @@ tokeninterceptor.service.ts
   }
 
 ```
+
+## Screenshots 📷
+
+![netflix-angular](http://pink0.online/netflix2.jpg)
+![netflix-angular](http://pink0.online/netflix3.jpg)
 
 ## Author ✒️
 
