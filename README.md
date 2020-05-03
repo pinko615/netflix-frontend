@@ -28,11 +28,11 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md)
 
-## Firsts steps 🚀
+## Firsts steps
 
 _You can download or clone this project to see the code of the entire website._
 ```
-git clone https://github.com/pinko615/GeeksHubs-P4---BackendMovie.git
+git clone https://github.com/pinko615/GH-Proyecto-1-Netflix-Frontend.git
 ```
 
 ## Version 🖥
@@ -41,18 +41,27 @@ _v1.0_
 
 ## Developed with 🛠️
 
-* [JavaScript]
-* [Express]
+* [Angular]
 * [Node]
-* [Sequelize-cli]
-* [SQL]
-* [Postman]
+* [Bootstrap]
 
-## Settings ⚙️
+## Dependencies ⚙️
 
-_To download and install all the dependencies you have to run the following commands._
 ```
-npm init
+"@angular/animations": "~9.1.0",
+    "@angular/common": "~9.1.0",
+    "@angular/compiler": "~9.1.0",
+    "@angular/core": "~9.1.0",
+    "@angular/forms": "~9.1.0",
+    "@angular/platform-browser": "~9.1.0",
+    "@angular/platform-browser-dynamic": "~9.1.0",
+    "@angular/router": "~9.1.0",
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.5.0",
+    "ng2-search-filter": "^0.5.1",
+    "rxjs": "~6.5.4",
+    "tslib": "^1.10.0",
+    "zone.js": "~0.10.2"
 ```
 ```
 npm install
