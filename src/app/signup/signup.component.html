@@ -1,0 +1,47 @@
+<body>
+    <div class="container">
+        <div class="img">
+            <img src="../../assets/login/ilus.svg" alt="ilustration">
+        </div>
+    <div class="login-container">
+        <form action="index.html">
+            <img class="avatar" src="../../assets/login/avatar.svg" alt="avatar">
+            <div class="input-div one">
+                <div class="i">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div>
+                    <input [(ngModel)]="signUpUser.firstName" name="name" class="input" type="text" placeholder="Name">
+                </div>
+            </div>
+            <div class="input-div one">
+                <div class="i">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                    <input [(ngModel)]="signUpUser.email" name="email" class="input" type="text" placeholder="Email address">
+                </div>
+            </div>
+            <div class="input-div two">
+                <div class="i">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div>
+                    <input [(ngModel)]="signUpUser.password" name="password" class="input" type="password" placeholder="Password">
+                </div>
+            </div>
+            <div class="input-div two">
+                <div class="i">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div>
+                    <input [(ngModel)]="signUpUser.password" name="password" class="input" type="password" placeholder="Confirm Password">
+                </div>
+            </div>
+            <button (click)="signUp()" class="btn">Register</button>
+              <!-- <input type="submit" class="btn" value="Sign Up"> -->
+              <a routerLink="/login">Already have an account? <span>Login here!</span></a>
+        </form>
+    </div>
+    </div>
+</body>

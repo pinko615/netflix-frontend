@@ -1,0 +1,307 @@
+<div class="container">
+    <div class="view-account">
+        <section class="module">
+            <div class="module-inner">
+                <div class="side-bar">
+                    <div class="user-info">
+                        <img class="img-profile img-circle img-responsive center-block" src="../../assets/avatar.svg" alt="">
+                        <ul class="meta list list-unstyled">
+                            <li class="name">Martin Pinto
+                                <label class="label label-info"><i class="fas fa-user"></i> Admin</label>
+                            </li>
+                        </ul>  
+                    </div>
+                    <nav class="side-menu">
+                        <ul class="nav">
+                            <li routerLinkActive="active">
+                                <a routerLink="/admin/orders">
+                                    <span class="fa fa-shopping-cart"></span> Orders
+                                </a>
+                            </li>
+                            <li routerLinkActive="active">
+                                <a routerLink="/admin/users">
+                                    <span class="fa fa-user"></span> Users
+                                </a>
+                            </li>
+                            <li routerLinkActive="active">
+                              <a routerLink="/admin/upload">
+                                  <span class="fas fa-file-upload"></span> Uploads
+                              </a>
+                          </li>
+                            <li routerLinkActive="active">
+                              <a routerLink="/admin/movies">
+                                  <span class="fas fa-video"></span> Movies
+                              </a>
+                          </li>
+                          <li routerLinkActive="active">
+                            <a routerLink="/admin/actors">
+                                <span class="fas fa-theater-masks"></span> Actors
+                            </a>
+                        </li>
+                        <li routerLinkActive="active">
+                          <a routerLink="/admin/genres">
+                              <span class="fa fa-film"></span> Genres
+                          </a>
+                      </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Uploads -->
+                <div class="content-panel">
+                    <div class="col-md-12 order-md-1 form-rent">
+                        <h4 class="mb-3">Uploads</h4>
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Movie</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Actors</a>
+                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Genres</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                <h5>Movie details</h5>
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="title">Title</label>
+                                        <input [(ngModel)]="createMovie.title" type="text" class="form-control" id="title" placeholder="Ex. The Matrix" value="">
+                                        <div class="invalid-feedback">
+                                            Valid title is required.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="year">Year</label>
+                                            <select [(ngModel)]="createMovie.year" class="custom-select d-block w-100" id="year" >
+                                                <option>2020</option>
+                                                <option>2019</option>
+                                                <option>2018</option>
+                                                <option>2017</option>
+                                                <option>2016</option>
+                                                <option>2015</option>
+                                                <option>2014</option>
+                                                <option>2013</option>
+                                                <option>2012</option>
+                                                <option>2011</option>
+                                                <option>2010</option>
+                                                <option>2009</option>
+                                                <option>2008</option>
+                                                <option>2007</option>
+                                                <option>2006</option>
+                                                <option>2005</option>
+                                                <option>2004</option>
+                                                <option>2003</option>
+                                                <option>2002</option>
+                                                <option>2001</option>
+                                                <option>2000</option>
+                                                <option>1999</option>
+                                                <option>1998</option>
+                                                <option>1997</option>
+                                                <option>1996</option>
+                                                <option>1995</option>
+                                                <option>1994</option>
+                                                <option>1993</option>
+                                                <option>1992</option>
+                                                <option>1991</option>
+                                                <option>1990</option>
+                                            </select>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="length">Length</label>
+                                        <input [(ngModel)]="createMovie.length" type="text" class="form-control" id="length" placeholder="Ex. 1h 23m" value="">
+                                        <div class="invalid-feedback">
+                                            Valid length is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="genreId">Genre</label>
+                                        <select [(ngModel)]="createMovie.genreId" class="custom-select d-block w-100" id="genreId" >
+                                            <option value="5ea4d503c38bba20d337ba07">1 - Action</option>
+                                            <option value="5ea4d51cc38bba20d337ba08">2 - Comedy</option>
+                                            <option value="5ea4d529c38bba20d337ba09">3 - Documentary</option>
+                                            <option value="5ea4d52fc38bba20d337ba0a">4 - Drama</option>
+                                            <option value="5ea4d539c38bba20d337ba0b">5 - Family</option>
+                                            <option value="5ea4d543c38bba20d337ba0c">6 - Romance</option>
+                                            <option value="5ea4d54ac38bba20d337ba0d">7 - Terror</option>
+                                            <option value="5ea4d555c38bba20d337ba0e">8 - Western</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="premiere">Premiere</label>
+                                            <select [(ngModel)]="createMovie.premiere" class="custom-select d-block w-100" id="premiere" >
+                                                <option>false</option>
+                                                <option>true</option>
+                                            </select>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="popular">Popular</label>
+                                        <select [(ngModel)]="createMovie.popular" class="custom-select d-block w-100" id="popular" >
+                                                <option>false</option>
+                                                <option>true</option>
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="price">Price</label>
+                                        <select [(ngModel)]="createMovie.price" class="custom-select d-block w-100" id="price">
+                                            <option value="8">€8</option>
+                                            <option value="7">€7</option>
+                                            <option value="6">€6</option>
+                                            <option value="5">€5</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="poster">Poster</label>
+                                        <input [(ngModel)]="createMovie.poster" type="text" class="form-control" id="poster" placeholder="Ex. https://image.tmdb.org/t/p/original/y95lQLnuNKdPAzw9F9Ab8kJ80c3.jpg" value="">
+                                        <div class="invalid-feedback">
+                                            Valid poster is required.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="background">Background</label>
+                                        <input [(ngModel)]="createMovie.background" type="text" class="form-control" id="background" placeholder="Ex. https://image.tmdb.org/t/p/original/y95lQLnuNKdPAzw9F9Ab8kJ80c3.jpg">
+                                        <div class="invalid-feedback">
+                                            Valid background is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="rating">Rating</label>
+                                        <input [(ngModel)]="createMovie.rating" type="text" class="form-control" id="rating" placeholder="Ex. 7.2" required>
+                                        <div class="invalid-feedback">
+                                            Valid rating is required.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="trailerUrl">Trailer</label>
+                                        <input [(ngModel)]="createMovie.trailerUrl" type="text" class="form-control" id="trailerUrl" placeholder="Ex. jKCj3XuPG8M">
+                                        <div class="invalid-feedback">
+                                            Valid trailerUrl is required.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="actorId">Actors</label>
+                                        <input [(ngModel)]="createMovie.actorId" type="text" class="form-control" id="actors" placeholder="">
+                                        <div class="invalid-feedback">
+                                            Valid actors is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="mainHome">Main Home</label>
+                                            <select [(ngModel)]="createMovie.mainHome" class="custom-select d-block w-100" id="mainHome" >
+                                            <option>false</option>
+                                            <option>true</option>
+                                            </select>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="mainPopular">Main Popular</label>
+                                            <select [(ngModel)]="createMovie.mainPopular" class="custom-select d-block w-100" id="mainPopular" >
+                                            <option>false</option>
+                                            <option>true</option>
+                                            </select>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="mainPremiere">Main Premiere</label>
+                                            <select [(ngModel)]="createMovie.mainPremiere" class="custom-select d-block w-100" id="mainPremiere" >
+                                            <option>false</option>
+                                            <option>true</option>
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md mb-3">
+                                        <div class="form-group">
+                                            <label for="description">Description</label>
+                                            <textarea [(ngModel)]="createMovie.description" class="form-control rounded" id="description" rows="5"></textarea>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-10 col-sm-9 col-xs-12 col-md-push-2 col-sm-push-3 col-xs-push-0">
+                                        <button (click)="createMovies()" class="btn btn-primary" type="submit">Upload movie</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <h5>Actor details</h5>
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="firstName">First Name</label>
+                                        <input [(ngModel)]="createActor.firstName" type="text" class="form-control" id="firstName" placeholder="Ex. Leonardo" value="" required>
+                                        <div class="invalid-feedback">
+                                            Valid first name is required.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="lastName">Last Name</label>
+                                        <input [(ngModel)]="createActor.lastName" type="text" class="form-control" id="lastName" placeholder="Ex. DiCaprio" value="" required>
+                                        <div class="invalid-feedback">
+                                            Valid last name is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="country">Country</label>
+                                        <input [(ngModel)]="createActor.country" type="text" class="form-control" id="country" placeholder="Ex. EE.UU" value="" required>
+                                        <div class="invalid-feedback">
+                                            Valid country is required.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="city">City</label>
+                                        <input [(ngModel)]="createActor.city" type="text" class="form-control" id="city" placeholder="Ex. Pensilvania" value="" >
+                                        <div class="invalid-feedback">
+                                            Valid city is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-10 col-sm-9 col-xs-12 col-md-push-2 col-sm-push-3 col-xs-push-0">
+                                        <button (click)="createActors()" class="btn btn-primary" type="submit" value="">Upload actor</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <h5>Genre details</h5>
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="name">Name</label>
+                                        <input [(ngModel)]="createGenre.name" type="text" class="form-control" id="name" placeholder="Ex. Action" value="" >
+                                        <div class="invalid-feedback">
+                                            Valid genre name is required.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="imageUrl">ImgUrl
+                                        </label>
+                                        <input [(ngModel)]="createGenre.imageUrl" type="text" class="form-control" id="imageUrl" placeholder="Ex. https://image.tmdb.org/t/p/original/gbPfvwBqbiHpQkYZQvVwB6MVauV.jpg" value="" >
+                                        <div class="invalid-feedback">
+                                            Valid imageUrl is required.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="popular">Popular</label>
+                                        <select [(ngModel)]="createGenre.popular" class="custom-select d-block w-100" id="popular" >
+                                            <option>false</option>
+                                            <option>true</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-10 col-sm-9 col-xs-12 col-md-push-2 col-sm-push-3 col-xs-push-0">
+                                        <button (click)="createGenres()" class="btn btn-primary" type="submit" value="">Upload genre</button>
+                                    </div>
+                                </div>
+                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+            </div>
+        </section>
+    </div>
+</div>

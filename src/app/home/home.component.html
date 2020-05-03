@@ -1,0 +1,212 @@
+<!-- main movie -->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div [style.background-image]="getImgContent(homemains[0]?.background)" class="main-movie bg-movie">
+            <div class="container">
+                <h3 class="title">{{homemains[0].title}} <span>({{homemains[0].year}})</span></h3>
+                <p class="description">
+                    {{homemains[0].description}}
+                </p>
+                <button role="button" class="btn" routerLink="rent-movie"><i class="fas fa-compact-disc"></i>Rent this movie</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="far fa-play-circle"></i> Official Trailer</button>
+                    
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body mb-0 p-0">
+                                <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sowGYbxTPgU" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div [style.background-image]="getImgContent(homemains[1]?.background)" class="main-movie bg-movie">
+            <div class="container">
+                <h3 class="title">{{homemains[1].title}} <span>({{homemains[1].year}})</span></h3>
+                <p class="description">
+                    {{homemains[1].description}}
+                </p>
+                <button role="button" class="btn" routerLink="rent-movie"><i class="fas fa-compact-disc"></i>Rent this movie</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="far fa-play-circle"></i> Official Trailer</button>
+                    
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body mb-0 p-0">
+                                <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sowGYbxTPgUEz0rXJfjnsc" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div [style.background-image]="getImgContent(homemains[2]?.background)" class="main-movie bg-movie">
+            <div class="container">
+                <h3 class="title">{{homemains[2].title}} <span>({{homemains[2].year}})</span></h3>
+                <p class="description">
+                    {{homemains[2].description}}
+                </p>
+                <button role="button" class="btn" routerLink="rent-movie"><i class="fas fa-compact-disc"></i>Rent this movie</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="far fa-play-circle"></i> Official Trailer</button>
+                    
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body mb-0 p-0">
+                                <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vTfJp2Ts9X8" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+<!-- trending movies -->
+<div class="container">
+    <div class="container-title-control">
+        <h3>Trending Now</h3>
+        <div>
+            <a routerLink="trending">
+                <p class="view-all"> View all trending movies <i class="fas fa-arrow-right"></i></p>
+            </a>
+        </div>
+    </div>
+    <div id="multi-item-trending" class="carousel slide carousel-multi-item" data-ride="carousel">
+        <div class="carousel-inner">
+            <!--first slide-->
+            <div class="carousel-item active">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movietrending of moviestrending; let i = index">
+                        <div *ngIf="i < 6">
+                            <div class="card mb-2">
+                                <a [routerLink]="['/movie', movietrending._id]">
+                                    <img class="card-img-top" src="{{movietrending.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>          
+            </div>
+            <!--second slide-->
+            <div class="carousel-item">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movietrending of moviestrending; let i = index">
+                        <div *ngIf="i >= 6 && i < 12">
+                            <div class="card mb-2">
+                                <a routerLink="movie">
+                                    <img class="card-img-top" src="{{movietrending.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>             
+            </div>
+        </div>
+        <!-- controls -->
+        <div class="controls-bottom">
+            <a class="btn" href="#multi-item-trending" data-slide="prev">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="btn" href="#multi-item-trending" data-slide="next">
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- popular genres -->
+<div class="container popular">
+    <div class="container-title-control">
+        <h3>Popular Genres</h3>
+        <div>
+            <a routerLink="genres">
+                <p class="view-all"> View all movie genres <i class="fas fa-arrow-right"></i></p>
+            </a>
+        </div>
+    </div>
+    <div>
+                <div class="row no-gutters">
+                    <div class="col-sm col-xs col-6" *ngFor="let genreimage of genreimages">
+                        <div class="card mb-2">
+                            <a routerLink="genres/{{genreimage.name | lowercase }}">
+                                <img class="card-img-top" src="{{genreimage.imageUrl}}">
+                            </a>
+                            <p class="genres">{{genreimage.name}}</p>
+                        </div>
+                    </div>
+                </div>          
+        </div>
+</div>
+<!-- premiere movies -->
+<div class="container">
+    <div class="container-title-control">
+        <h3>Premiere Movies</h3>
+        <div>
+            <a routerLink="premiere">
+                <p class="view-all"> View all premiere movies <i class="fas fa-arrow-right"></i></p>
+            </a>
+        </div>
+    </div>
+    <div id="multi-item-premiere" class="carousel slide carousel-multi-item" data-ride="carousel">
+        <div class="carousel-inner">
+            <!--first slide-->
+            <div class="carousel-item active">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let moviepremiere of moviespremiere; let i = index">
+                        <div *ngIf="i < 6">
+                        <div class="card mb-2">
+                            <a [routerLink]="['/movie', moviepremiere._id]">
+                                <img class="card-img-top" src="{{moviepremiere.poster}}">
+                            </a>   
+                        </div>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+            <!--second slide-->
+            <div class="carousel-item">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let moviepremiere of moviespremiere; let i = index">
+                        <div *ngIf="i >= 6 && i < 12">
+                        <div class="card mb-2">
+                            <a routerLink="movie">
+                                <img class="card-img-top" src="{{moviepremiere.poster}}">
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                </div>          
+            </div>           
+        </div>
+        <!-- controls -->
+        <div class="controls-bottom">
+            <a class="btn" href="#multi-item-premiere" data-slide="prev">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="btn" href="#multi-item-premiere" data-slide="next">
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+</div>

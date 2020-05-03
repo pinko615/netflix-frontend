@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="container-title-control">
+        <h3>Action movies</h3>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a [routerLink]="['/genres']">Genres</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Action</li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="single_product_item col-lg-3 col-sm-6 col-6" *ngFor="let movieGenreAction of moviesGenreAction">
+            <a [routerLink]="['/movie', movieGenreAction._id]"><img src="{{movieGenreAction.poster}}" alt="#" class="img-fluid movie-img">
+            </a>
+            <p class="movie-title"><a [routerLink]="['/movie', movieGenreAction._id]">{{movieGenreAction.title}} <span>({{movieGenreAction.year}})</span></a></p>
+            <ul class="list-unstyled list-inline font-small movie-desc">
+                <li class="list-inline-item pr-2 white-text">
+                    <i class="fas fa-film pr-1"></i>
+                    <a routerLink="/genres/{{movieGenreAction.genre.name | lowercase}}">{{movieGenreAction.genre.name}}</a>
+                </li>
+                <li class="list-inline-item pr-2">
+                    <i class="far fa-clock pr-1"></i>{{movieGenreAction.length}}
+                </li>
+                <li class="list-inline-item pr-2">
+                    <i class="far fa-star pr-1"></i>{{movieGenreAction.rating}}
+                </li>
+            </ul>
+        </div>
+    </div>                        
+</div>

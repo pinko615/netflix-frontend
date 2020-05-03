@@ -1,0 +1,311 @@
+// main movie
+.main-movie {
+    font-size: 16px;
+    min-height: 60vh;
+    color: white;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: flex-end;
+}
+
+.bg-movie {
+    background-position: center center;
+    background-size: cover;
+    // background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)), url() !important;
+}
+
+.main-movie .container {
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+}
+
+.main-movie .title {
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+.main-movie .title span{
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.main-movie .description {
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+
+.main-movie .btn {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    color: white;
+    padding: 0.93em 1.87em;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transform: .3 ease all;
+    font-size: 1.12em;
+}
+
+.main-movie .btn:hover {
+    background: white;
+    color: black;
+}
+
+.main-movie .btn i {
+    margin-right: 1.25em;
+}
+
+// trending movies
+
+.container-title-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+    margin-top: 14px;
+}
+
+.container-title-control h3 {
+    color: white;
+    font-size: 30px;
+}
+
+.container-title-control p {
+    color: white;
+    font-size: 18px;
+}
+
+.container-title-control p:hover {
+    color: var(--red);
+}
+
+.container-title-control a {
+    text-decoration: none;
+}
+
+// .carousel-inner {
+//     overflow: visible;
+// }
+
+.card {
+    border-radius: 0px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+.card-img-top {
+    border-radius: 0px;
+    width: 100%;
+    vertical-align: top;
+    position: relative;
+}
+
+.card .genres {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding: 8px 24px;
+    background-color: black;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+// controls
+
+.controls-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.controls-bottom a i {
+    color: var(--red);
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .main-movie {
+        font-size: 14px
+    }
+
+    .main-movie .description {
+        max-width: 100%;
+    }
+
+    .trending-movies .carousel-container {
+        overflow: visible;
+    }
+
+    .trending-movies .carousel-container .carousel{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .trending-movies .indicators,
+    .trending-movies .left-arrow,
+    .trending-movies .right-arrow {
+        display: none;
+    }
+}
+
+.movie-img {
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.movie-img:hover {
+    transform: scale(1.02);
+    transform-origin: center;
+}
+
+.movie-title {
+    margin-top: 14px;
+    margin-bottom: 4px;
+}
+
+.movie-title a {
+    color: white;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.movie-title a:hover {
+    text-decoration: none;
+}
+
+.movie-title a span {
+    font-size: 14px;
+}
+
+.movie-desc {
+    color: #aaaaaa;
+    font-size: 14px;
+    margin-bottom: 26px;
+}
+
+.movie-desc i {
+    color: var(--red);
+}
+
+.movie-desc a {
+    color: #aaaaaa;
+}
+
+.movie-desc a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.product_sidebar{
+    .single_sedebar{
+        position: relative;
+        margin-bottom: 20px;
+        input{
+            background-color: #222222;
+            border-radius: 50px;
+            border: 1px solid #F4EDF2;
+            padding: 13px 25px;
+            width: 100%;
+            line-height: 22px;
+        }
+        ::placeholder{
+            color: white;
+        }
+        i{
+           position: absolute;
+           right: 30px;
+           top: 17px; 
+        }
+    }
+}
+.select_option{
+    .select_option_list{
+        background-color: #222222;
+        border-radius: 50px;
+        border: none;
+        padding: 13px 25px;
+        width: 100%;
+        line-height: 22px;
+        color: white;
+    }
+    .select_option_dropdown{
+        background-color: #222222;
+        border-radius: 10px;
+        border: 1px solid #333333;
+        padding: 13px 25px;
+        width: 100%;
+        margin-top: 10px;
+
+        a {
+            color: #aaaaaa;
+
+        }
+    }
+}
+
+
+@media (max-width: 991px) {
+    /* line 32, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_subscribe_part.scss */
+    .subscribe_part .subscribe_form .btn_1 {
+      padding: 15px 15px;
+    }
+  }
+  
+  /* line 43, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_subscribe_part.scss */
+  .subscribe_part .subscribe_form ::placeholder {
+    color: #E4D3DF;
+  }
+  
+  /***************** product list css *******************/
+  /* line 3, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_product_list.scss */
+  .product_sidebar .single_sedebar {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  /* line 6, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_product_list.scss */
+  .product_sidebar .single_sedebar input {
+    background-color: #222222;
+    border-radius: 50px;
+    border: 1px solid #333333;
+    padding: 13px 25px;
+    width: 100%;
+    line-height: 22px;
+    color: white;
+  }
+  
+  /* line 14, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_product_list.scss */
+  .product_sidebar .single_sedebar ::placeholder {
+    color: white;
+  }
+  
+  /* line 17, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_product_list.scss */
+  .product_sidebar .single_sedebar i {
+    position: absolute;
+    right: 30px;
+    top: 17px;
+    color: white;
+  }

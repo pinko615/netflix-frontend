@@ -1,0 +1,78 @@
+
+.container-title-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+    margin-top: 14px;
+}
+
+.container-title-control h3 {
+    color: white;
+    font-size: 30px;
+}
+
+.container-title-control p {
+    color: white;
+    font-size: 18px;
+}
+
+.container-title-control p:hover {
+    color: var(--red);
+}
+
+.container-title-control a {
+    text-decoration: none;
+}
+
+.card {
+    border-radius: 0px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+.card-img-top {
+    border-radius: 0px;
+    width: 100%;
+    vertical-align: top;
+    position: relative;
+}
+
+.card .genres {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding: 8px 24px;
+    background-color: black;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+// controls
+
+.controls-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.controls-bottom a i {
+    color: var(--red);
+}

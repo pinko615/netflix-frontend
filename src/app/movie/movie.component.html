@@ -1,0 +1,53 @@
+<!-- main movie -->
+
+<div *ngIf="movie" class="main-movie" style="background: url(http://pink0.online/bg4.jpg); background-position: center center; background-size: cover;">
+    <div class="container"> 
+        <h3 class="title" style="position: relative">{{movie.title}} <span>({{movie.year}})</span></h3>
+        <ul class="list-unstyled list-inline font-small">
+            <li class="list-inline-item pr-2 white-text">
+                <a routerLink="/genres/{{movie.genre.name | lowercase}}"><i class="fas fa-film pr-1"></i>{{movie.genre.name}}</a>
+            </li>
+            <li class="list-inline-item pr-2">
+                <i class="far fa-clock pr-1"></i>{{movie.length}}
+            </li>
+            <li class="list-inline-item pr-2">
+                <i class="far fa-star pr-1"></i>{{movie.rating}}
+            </li>
+            <li class="list-inline-item pr-2">
+                <i class="fas fa-euro-sign"></i> {{movie.price}}
+            </li>
+        </ul>
+        <p class="description">
+            {{movie.description}}
+        </p>
+        <ul class="list-unstyled list-inline font-small">
+            <li class="list-inline-item pr-2">
+                <i class="fas fa-users pr-1"></i>{{movie.actor.firstName}} {{movie.actor.lastName}}
+            </li>
+        </ul>
+        <button role="button" class="btn" [routerLink]="['/rent-movie', movie._id]"><i class="fas fa-compact-disc"></i>Rent this movie</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="far fa-play-circle"></i> Official Trailer</button>
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body mb-0 p-0">
+                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rBxcF-r9Ibs" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- recommended movies -->
+<!-- <div class="container">
+    <div class="container-title-control">
+        <h3>Recommended Movies</h3>
+        <div>
+            <a routerLink="movies">
+                <p class="view-all"> View all Movies <i class="fas fa-arrow-right"></i></p>
+            </a>
+        </div>
+    </div>
+</div> -->

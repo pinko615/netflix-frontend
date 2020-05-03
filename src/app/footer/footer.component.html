@@ -1,0 +1,50 @@
+<footer>
+    <div class="container">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <div class="footer-icons">
+                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a routerLink="/movies">Movies</a>
+                        </li>
+                        <li>
+                            <a routerLink="/trending">Trending</a>
+                        </li>
+                        <li>
+                            <a routerLink="/premiere">Premiere</a>
+                        </li>
+                        <li>
+                            <a routerLink="/genres">Genres</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a routerLink="/profile">Profile</a>
+                        </li>
+                        <li>
+                            <a routerLink="/my-orders">My Orders</a>
+                        </li>
+                        <br>
+                        <li>
+                        <a class="sign-out" (click)="authService.logoutUser()">Sign Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">© 2020 Copyright | Visit full project on
+            <a href="https://github.com/"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </div>    
+</footer>

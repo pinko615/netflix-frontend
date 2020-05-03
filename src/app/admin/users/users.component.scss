@@ -1,0 +1,27 @@
+.table {
+    color: white;
+}
+
+.table td,
+.table th {
+    border-bottom: 1px solid #242424;
+    border-top: 1px solid #242424;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 1px solid #242424;
+    border-top: 1px solid #242424;
+}
+
+
+.btn-users {
+    background: transparent;
+    border: none;
+    color: var(--red);
+    margin-right: 10px;
+}
+
+.email a {
+    color: white;
+}

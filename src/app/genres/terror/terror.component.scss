@@ -1,0 +1,170 @@
+
+.movie-img {
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+    position: relative;
+}
+.price {
+    position: absolute;
+    top: 70%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding: 8px 14px;
+    background-color: black;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    background-color: rgba(222, 17, 17, 0.8);
+    cursor: pointer;
+                    }
+
+.movie-img:hover {
+    transform: scale(1.02);
+    transform-origin: center;
+}
+
+.movie-title {
+    margin-top: 14px;
+    margin-bottom: 4px;
+}
+
+.movie-title a {
+    color: white;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.movie-title a:hover {
+    text-decoration: none;
+}
+
+.movie-title a span {
+    font-size: 14px;
+}
+
+.movie-desc {
+    color: #aaaaaa;
+    font-size: 14px;
+    margin-bottom: 26px;
+}
+
+.movie-desc i {
+    color: var(--red);
+}
+
+.movie-desc a {
+    color: #aaaaaa;
+}
+
+.movie-desc a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.product_sidebar{
+    .single_sedebar{
+        position: relative;
+        margin-bottom: 20px;
+        input{
+            background-color: #222222;
+            border-radius: 50px;
+            border: 1px solid #F4EDF2;
+            padding: 13px 25px;
+            width: 100%;
+            line-height: 22px;
+        }
+        ::placeholder{
+            color: white;
+        }
+        i{
+           position: absolute;
+           right: 30px;
+           top: 17px; 
+        }
+    }
+}
+.select_option{
+    .select_option_list{
+        background-color: #222222;
+        border-radius: 50px;
+        border: none;
+        padding: 13px 25px;
+        width: 100%;
+        line-height: 22px;
+        color: white;
+    }
+    .select_option_dropdown{
+        background-color: #222222;
+        border-radius: 10px;
+        border: 1px solid #333333;
+        padding: 13px 25px;
+        width: 100%;
+        margin-top: 10px;
+
+        a {
+            color: #aaaaaa;
+
+        }
+    }
+}
+
+.container-title-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+    margin-top: 14px;
+}
+
+.container-title-control h3 {
+    color: white;
+    font-size: 30px;
+}
+
+
+@media (max-width: 991px) {
+    /* line 32, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_subscribe_part.scss */
+    .subscribe_part .subscribe_form .btn_1 {
+      padding: 15px 15px;
+    }
+  }
+  
+  /* line 43, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_subscribe_part.scss */
+  .subscribe_part .subscribe_form ::placeholder {
+    color: #E4D3DF;
+  }
+  
+  /***************** product list css *******************/
+  /* line 3, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_product_list.scss */
+  .product_sidebar .single_sedebar {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  /* line 6, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_product_list.scss */
+  .product_sidebar .single_sedebar input {
+    background-color: #222222;
+    border-radius: 50px;
+    border: 1px solid #333333;
+    padding: 13px 25px;
+    width: 100%;
+    line-height: 22px;
+    color: white;
+  }
+  
+  /* line 14, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_product_list.scss */
+  .product_sidebar .single_sedebar ::placeholder {
+    color: white;
+  }
+  
+  /* line 17, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_product_list.scss */
+  .product_sidebar .single_sedebar i {
+    position: absolute;
+    right: 30px;
+    top: 17px;
+    color: white;
+  }
+
+
+  

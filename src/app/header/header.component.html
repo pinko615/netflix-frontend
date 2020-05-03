@@ -1,0 +1,44 @@
+<!-- header logged in -->
+<header *ngIf="authService.isLogged()">
+    <div class="container">
+        <a routerLink="/"><img src="../../assets/logo.png" alt="logo" class="logo"></a>
+        <nav>
+          <a routerLink="movies" routerLinkActive="active">Movies</a>
+          <a routerLink="trending" routerLinkActive="active">Trending</a>
+          <a routerLink="premiere" routerLinkActive="active">Premiere</a>
+          <a routerLink="genres" routerLinkActive="active">Genres</a>
+          <div class="btn-group">
+            <button type="button" class="avatar dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="../../assets/avatar.svg" width="35px">
+            </button>
+            <div class="dropdown-menu">
+              <!-- menu si es usuario -->
+              <a class="dropdown-item drop" routerLink="profile">Profile</a>
+              <a class="dropdown-item drop" routerLink="my-orders">My Orders</a>
+              <!-- menu si es admin -->
+              <!-- <div [hidden]="user.role == 'Admin'"> -->
+              <a class="dropdown-item drop" routerLink="admin/upload">Admin</a>
+            <!-- </div> -->
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item drop sign-out" (click)="authService.logoutUser()">Sign Out</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+</header>
+<!-- header without login -->
+<header *ngIf="">
+  <div class="container">
+      <a routerLink="/"><img src="../../assets/logo.png" alt="logo" class="logo"></a>
+      <nav>
+        <a routerLink="movies" routerLinkActive="active">Movies</a>
+        <a routerLink="trending" routerLinkActive="active">Trending</a>
+        <a routerLink="premiere" routerLinkActive="active">Premiere</a>
+        <a routerLink="genres" routerLinkActive="active">Genres</a>
+        <a routerLink="login" routerLinkActive="active" class="login-btn">Login</a>
+      </nav>
+    </div>
+</header>
+
+
+

@@ -1,0 +1,55 @@
+footer .container {
+    border-top: 1px solid #242424;
+    margin-top: 30px;
+}
+
+footer .container .row {
+    margin-top: 30px;
+}
+
+footer p {
+    color:#aaaaaa;
+}
+
+footer ul li a {
+    color:#aaaaaa;
+}
+
+footer ul li a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-icons {
+    font-size: 35px;
+}
+
+footer .footer-icons a {
+    color:#aaaaaa;
+}
+
+footer .footer-icons a .fab, .far {
+    margin-right: 15px;
+}
+
+footer .footer-icons a:hover {
+    color: white;
+}
+
+footer .footer-copyright {
+    color: #aaaaaa;
+    margin-bottom: 15px;
+}
+
+footer .footer-copyright a {
+    color: var(--red);
+}
+
+footer .footer-copyright a:hover {
+    text-decoration: none;
+    color: #b50f27;
+}
+
+.sign-out {
+    cursor: pointer;
+}

@@ -1,0 +1,114 @@
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div [style.background-image]="getImgContents(popularsmain[0]?.background)" class="main-movie bg-movie">
+            <div class="container">
+                <h3 class="title">{{popularsmain[0].title}} <span>({{popularsmain[0].year}})</span></h3>
+                <p class="description">
+                    {{popularsmain[0].description}}
+                </p>
+                <button role="button" class="btn" routerLink="rent-movie"><i class="fas fa-compact-disc"></i>Rent this movie</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="far fa-play-circle"></i> Official Trailer</button>
+                    
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body mb-0 p-0">
+                                <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sowGYbxTPgU" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div [style.background-image]="getImgContents(popularsmain[1]?.background)" class="main-movie bg-movie">
+            <div class="container">
+                <h3 class="title">{{popularsmain[1].title}} <span>({{popularsmain[1].year}})</span></h3>
+                <p class="description">
+                    {{popularsmain[1].description}}
+                </p>
+                <button role="button" class="btn" routerLink="rent-movie"><i class="fas fa-compact-disc"></i>Rent this movie</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="far fa-play-circle"></i> Official Trailer</button>
+                    
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body mb-0 p-0">
+                                <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sowGYbxTPgUEz0rXJfjnsc" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div [style.background-image]="getImgContents(popularsmain[2]?.background)" class="main-movie bg-movie">
+            <div class="container">
+                <h3 class="title">{{popularsmain[2].title}} <span>({{popularsmain[2].year}})</span></h3>
+                <p class="description">
+                    {{popularsmain[2].description}}
+                </p>
+                <button role="button" class="btn" routerLink="rent-movie"><i class="fas fa-compact-disc"></i>Rent this movie</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="far fa-play-circle"></i> Official Trailer</button>
+                    
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body mb-0 p-0">
+                                <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vTfJp2Ts9X8" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+<div class="container">
+    <div class="container-title-control">
+        <h3>Trending Now</h3>
+        <div class="d-flex justify-content-center h-100">
+            <div class="searchbar">
+              <input id="input-search" class="search_input" type="text" [(ngModel)]="searchTrending" [ngModelOptions]="{standalone: true}" autocomplete="off" placeholder="Search by title, actor or genre...">
+                <a id="btnSearch" class="search_icon"><i class="fas fa-search"></i></a>
+            </div>
+          </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-sm-6 col-6" *ngFor="let movietrending of moviestrending | filter:searchTrending">
+            <div class="single_product_item">
+                <a [routerLink]="['/movie', movietrending._id]"><img src="{{movietrending.poster}}" alt="#" class="img-fluid movie-img"></a>
+                <p class="movie-title"><a [routerLink]="['/movie', movietrending._id]">{{movietrending.title}} <span>({{movietrending.year}})</span></a></p>
+                <ul class="list-unstyled list-inline font-small movie-desc">
+                    <li class="list-inline-item pr-2 white-text">
+                        <i class="fas fa-film pr-1"></i><a routerLink="/genres/{{movietrending.genre.name | lowercase}}">{{movietrending.genre.name}}</a>
+                    </li>
+                    <li class="list-inline-item pr-2">
+                        <i class="far fa-clock pr-1"></i>{{movietrending.length}}
+                    </li>
+                    <li class="list-inline-item pr-2">
+                        <i class="far fa-star pr-1"></i>{{movietrending.rating}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

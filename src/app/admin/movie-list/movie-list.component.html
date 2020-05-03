@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="view-account">
+        <section class="module">
+            <div class="module-inner">
+                <div class="side-bar">
+                    <div class="user-info">
+                        <img class="img-profile img-circle img-responsive center-block" src="../../assets/avatar.svg" alt="">
+                        <ul class="meta list list-unstyled">
+                            <li class="name">Martin Pinto
+                                <label class="label label-info"><i class="fas fa-user"></i> Admin</label>
+                            </li>
+                        </ul>
+                    </div>
+                <nav class="side-menu">
+                    <ul class="nav">
+                        <li routerLinkActive="active">
+                            <a routerLink="/admin/orders">
+                                <span class="fa fa-shopping-cart"></span> Orders
+                            </a>
+                        </li>
+                        <li routerLinkActive="active">
+                            <a routerLink="/admin/users">
+                                <span class="fa fa-user"></span> Users
+                            </a>
+                        </li>
+                        <li routerLinkActive="active">
+                          <a routerLink="/admin/upload">
+                              <span class="fas fa-file-upload"></span> Uploads
+                          </a>
+                      </li>
+                        <li routerLinkActive="active">
+                          <a routerLink="/admin/movies">
+                              <span class="fas fa-video"></span> Movies
+                          </a>
+                      </li>
+                      <li routerLinkActive="active">
+                        <a routerLink="/admin/actors">
+                            <span class="fas fa-theater-masks"></span> Actors
+                        </a>
+                    </li>
+                    <li routerLinkActive="active">
+                      <a routerLink="/admin/genres">
+                          <span class="fa fa-film"></span> Genres
+                      </a>
+                  </li>
+                    </ul>
+              </nav>
+                </div>
+                <!-- Profile -->
+                <div class="content-panel">
+                    <form class="form-horizontal">
+                        <div class="col-md order-md-1 form-rent">
+                            <h4 class="mb-3">Movies list</h4>
+                            <div class="d-flex justify-content-left h-100">
+                                <div class="searchbar">
+                                  <input id="input-search" class="search_input" type="text" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" autocomplete="off" placeholder="Search by title, actor or genre...">
+                                    <a id="btnSearch" class="search_icon"><i class="fas fa-search"></i></a>
+                                </div>
+                              </div>
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">title</th>
+                                    <th scope="col">year</th>
+                                    <th scope="col">length</th>
+                                    <th scope="col">price</th>
+                                    <th scope="col">orders</th>
+                                    <th scope="col">options</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let movie of movies | filter:searchText">
+                                    <td>{{movie.title}}</td>
+                                    <td>{{movie.year}}</td>
+                                    <td>{{movie.length}}</td>
+                                    <td>{{movie.price}}</td>
+                                    <td>{{movie.numOrders}}</td>
+                                    <td><button class="btn-users" (click)="delete(movie)"><i class="far fa-trash-alt"></i></button>
+                                        <!-- <button class="btn-users" (click)="edit(movie)"><i class="far fa-edit"></i></button> -->
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,416 @@
+<!-- action -->
+<div class="container">
+    <div class="container-title-control">
+        <h3>Action</h3>
+        <div>
+            <a routerLink="action">
+                <p class="view-all"> View all action movies <i class="fas fa-arrow-right"></i></p>
+            </a>
+        </div>
+    </div>
+    <div id="multi-item-action" class="carousel slide carousel-multi-item" data-ride="carousel">
+        <div class="carousel-inner">
+            <!--first slide-->
+            <div class="carousel-item active">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movieGenreAction of moviesGenreAction; let i = index">
+                        <div *ngIf="i < 6">
+                            <div class="card mb-2">
+                                <a [routerLink]="['/movie', movieGenreAction._id]">
+                                    <img class="card-img-top" src="{{movieGenreAction.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>          
+            </div>
+            <!--second slide-->
+            <div class="carousel-item">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movieGenreAction of moviesGenreAction; let i = index">
+                        <div *ngIf="i >= 6 && i < 12">
+                            <div class="card mb-2">
+                                <a [routerLink]="['/movie', movieGenreAction._id]">
+                                    <img class="card-img-top" src="{{movieGenreAction.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>             
+            </div>
+        </div>
+        <!-- controls -->
+        <div class="controls-bottom">
+            <a class="btn" href="#multi-item-action" data-slide="prev">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="btn" href="#multi-item-action" data-slide="next">
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- comedy -->
+<div class="container">
+    <div class="container-title-control">
+        <h3>Comedy</h3>
+        <div>
+            <a routerLink="comedy">
+                <p class="view-all"> View all comedy movies <i class="fas fa-arrow-right"></i></p>
+            </a>
+        </div>
+    </div>
+    <div id="multi-item-comedy" class="carousel slide carousel-multi-item" data-ride="carousel">
+        <div class="carousel-inner">
+            <!--first slide-->
+            <div class="carousel-item active">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movieGenreComedy of moviesGenreComedy; let i = index">
+                        <div *ngIf="i < 6">
+                            <div class="card mb-2">
+                                <a [routerLink]="['/movie', movieGenreComedy._id]">
+                                    <img class="card-img-top" src="{{movieGenreComedy.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>          
+            </div>
+            <!--second slide-->
+            <div class="carousel-item">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movieGenreComedy of moviesGenreComedy; let i = index">
+                        <div *ngIf="i >= 6 && i < 12">
+                            <div class="card mb-2">
+                                <a [routerLink]="['/movie', movieGenreComedy._id]">
+                                    <img class="card-img-top" src="{{movieGenreComedy.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>             
+            </div>
+        </div>
+        <!-- controls -->
+        <div class="controls-bottom">
+            <a class="btn" href="#multi-item-comedy" data-slide="prev">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="btn" href="#multi-item-comedy" data-slide="next">
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- documentary -->
+<div class="container">
+    <div class="container-title-control">
+        <h3>Documentary</h3>
+        <div>
+            <a routerLink="documentary">
+                <p class="view-all"> View all documentary movies <i class="fas fa-arrow-right"></i></p>
+            </a>
+        </div>
+    </div>
+    <div id="multi-item-documentary" class="carousel slide carousel-multi-item" data-ride="carousel">
+        <div class="carousel-inner">
+            <!--first slide-->
+            <div class="carousel-item active">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movieGenreDocumentary of moviesGenreDocumentary; let i = index">
+                        <div *ngIf="i < 6">
+                            <div class="card mb-2">
+                                <a [routerLink]="['/movie', movieGenreDocumentary._id]">
+                                    <img class="card-img-top" src="{{movieGenreDocumentary.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>          
+            </div>
+            <!--second slide-->
+            <div class="carousel-item">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movieGenreDocumentary of moviesGenreDocumentary; let i = index">
+                        <div *ngIf="i >= 6 && i < 12">
+                            <div class="card mb-2">
+                                <a [routerLink]="['/movie', movieGenreDocumentary._id]">
+                                    <img class="card-img-top" src="{{movieGenreDocumentary.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>             
+            </div>
+        </div>
+        <!-- controls -->
+        <div class="controls-bottom">
+            <a class="btn" href="#multi-item-documentary" data-slide="prev">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="btn" href="#multi-item-documentary" data-slide="next">
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- drama -->
+<div class="container">
+    <div class="container-title-control">
+        <h3>Drama</h3>
+        <div>
+            <a routerLink="drama">
+                <p class="view-all"> View all drama movies <i class="fas fa-arrow-right"></i></p>
+            </a>
+        </div>
+    </div>
+    <div id="multi-item-drama" class="carousel slide carousel-multi-item" data-ride="carousel">
+        <div class="carousel-inner">
+            <!--first slide-->
+            <div class="carousel-item active">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movieGenreDrama of moviesGenreDrama; let i = index">
+                        <div *ngIf="i < 6">
+                            <div class="card mb-2">
+                                <a [routerLink]="['/movie', movieGenreDrama._id]">
+                                    <img class="card-img-top" src="{{movieGenreDrama.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>          
+            </div>
+            <!--second slide-->
+            <div class="carousel-item">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movieGenreDrama of moviesGenreDrama; let i = index">
+                        <div *ngIf="i >= 6 && i < 12">
+                            <div class="card mb-2">
+                                <a [routerLink]="['/movie', movieGenreDrama._id]">
+                                    <img class="card-img-top" src="{{movieGenreDrama.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>             
+            </div>
+        </div>
+        <!-- controls -->
+        <div class="controls-bottom">
+            <a class="btn" href="#multi-item-drama" data-slide="prev">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="btn" href="#multi-item-drama" data-slide="next">
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- family -->
+<div class="container">
+    <div class="container-title-control">
+        <h3>Family</h3>
+        <div>
+            <a routerLink="family">
+                <p class="view-all"> View all family movies <i class="fas fa-arrow-right"></i></p>
+            </a>
+        </div>
+    </div>
+    <div id="multi-item-family" class="carousel slide carousel-multi-item" data-ride="carousel">
+        <div class="carousel-inner">
+            <!--first slide-->
+            <div class="carousel-item active">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movieGenreFamily of moviesGenreFamily; let i = index">
+                        <div *ngIf="i < 6">
+                            <div class="card mb-2">
+                                <a [routerLink]="['/movie', movieGenreFamily._id]">
+                                    <img class="card-img-top" src="{{movieGenreFamily.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>          
+            </div>
+            <!--second slide-->
+            <div class="carousel-item">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movieGenreFamily of moviesGenreFamily; let i = index">
+                        <div *ngIf="i >= 6 && i < 12">
+                            <div class="card mb-2">
+                                <a [routerLink]="['/movie', movieGenreFamily._id]">
+                                    <img class="card-img-top" src="{{movieGenreFamily.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>             
+            </div>
+        </div>
+        <!-- controls -->
+        <div class="controls-bottom">
+            <a class="btn" href="#multi-item-family" data-slide="prev">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="btn" href="#multi-item-family" data-slide="next">
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- romance -->
+<div class="container">
+    <div class="container-title-control">
+        <h3>Romance</h3>
+        <div>
+            <a routerLink="romance">
+                <p class="view-all"> View all romance movies <i class="fas fa-arrow-right"></i></p>
+            </a>
+        </div>
+    </div>
+    <div id="multi-item-romance" class="carousel slide carousel-multi-item" data-ride="carousel">
+        <div class="carousel-inner">
+            <!--first slide-->
+            <div class="carousel-item active">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movieGenreRomance of moviesGenreRomance; let i = index">
+                        <div *ngIf="i < 6">
+                            <div class="card mb-2">
+                                <a [routerLink]="['/movie', movieGenreRomance._id]">
+                                    <img class="card-img-top" src="{{movieGenreRomance.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>          
+            </div>
+            <!--second slide-->
+            <div class="carousel-item">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movieGenreRomance of moviesGenreRomance; let i = index">
+                        <div *ngIf="i >= 6 && i < 12">
+                            <div class="card mb-2">
+                                <a [routerLink]="['/movie', movieGenreRomance._id]">
+                                    <img class="card-img-top" src="{{movieGenreRomance.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>             
+            </div>
+        </div>
+        <!-- controls -->
+        <div class="controls-bottom">
+            <a class="btn" href="#multi-item-romance" data-slide="prev">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="btn" href="#multi-item-romance" data-slide="next">
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- terror -->
+<div class="container">
+    <div class="container-title-control">
+        <h3>Terror</h3>
+        <div>
+            <a routerLink="terror">
+                <p class="view-all"> View all terror movies <i class="fas fa-arrow-right"></i></p>
+            </a>
+        </div>
+    </div>
+    <div id="multi-item-terror" class="carousel slide carousel-multi-item" data-ride="carousel">
+        <div class="carousel-inner">
+            <!--first slide-->
+            <div class="carousel-item active">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movieGenreTerror of moviesGenreTerror; let i = index">
+                        <div *ngIf="i < 6">
+                            <div class="card mb-2">
+                                <a [routerLink]="['/movie', movieGenreTerror._id]">
+                                    <img class="card-img-top" src="{{movieGenreTerror.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>          
+            </div>
+            <!--second slide-->
+            <div class="carousel-item">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movieGenreTerror of moviesGenreTerror; let i = index">
+                        <div *ngIf="i >= 6 && i < 12">
+                            <div class="card mb-2">
+                                <a [routerLink]="['/movie', movieGenreTerror._id]">
+                                    <img class="card-img-top" src="{{movieGenreTerror.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>             
+            </div>
+        </div>
+        <!-- controls -->
+        <div class="controls-bottom">
+            <a class="btn" href="#multi-item-terror" data-slide="prev">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="btn" href="#multi-item-terror" data-slide="next">
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- western -->
+<div class="container">
+    <div class="container-title-control">
+        <h3>Western</h3>
+        <div>
+            <a routerLink="western">
+                <p class="view-all"> View all western movies <i class="fas fa-arrow-right"></i></p>
+            </a>
+        </div>
+    </div>
+    <div id="multi-item-western" class="carousel slide carousel-multi-item" data-ride="carousel">
+        <div class="carousel-inner">
+            <!--first slide-->
+            <div class="carousel-item active">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movieGenreWestern of moviesGenreWestern; let i = index">
+                        <div *ngIf="i < 6">
+                            <div class="card mb-2">
+                                <a [routerLink]="['/movie', movieGenreWestern._id]">
+                                    <img class="card-img-top" src="{{movieGenreWestern.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>          
+            </div>
+            <!--second slide-->
+            <div class="carousel-item">
+                <div class="row no-gutters">
+                    <div class="col-6 col-sm-6 col-sm-4 col-md-2 col-lg-2 col-xl-2" *ngFor="let movieGenreWestern of moviesGenreWestern; let i = index">
+                        <div *ngIf="i >= 6 && i < 12">
+                            <div class="card mb-2">
+                                <a [routerLink]="['/movie', movieGenreWestern._id]">
+                                    <img class="card-img-top" src="{{movieGenreWestern.poster}}">
+                                </a>   
+                            </div>
+                        </div>
+                    </div>  
+                </div>             
+            </div>
+        </div>
+        <!-- controls -->
+        <div class="controls-bottom">
+            <a class="btn" href="#multi-item-western" data-slide="prev">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="btn" href="#multi-item-western" data-slide="next">
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+</div>

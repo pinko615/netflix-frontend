@@ -1,0 +1,36 @@
+.card-img, .card-img-top {
+    margin-top: 20px;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #242424;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+}
+
+a {
+    color: #aaaaaa;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.nav-link.active {
+    color: white;
+    background-color: #222222;
+    border: none;
+}
+
+.rent-again {
+    color: var(--red);
+}
+
+.movietitle {
+    font-size: 18px;
+    color: white;
+}
+
+p {
+    margin-bottom: 6px;
+}

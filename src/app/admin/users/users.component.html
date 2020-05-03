@@ -1,0 +1,94 @@
+<div class="container">
+    <div class="view-account">
+        <section class="module">
+            <div class="module-inner">
+                <div class="side-bar">
+                    <div class="user-info">
+                        <img class="img-profile img-circle img-responsive center-block" src="../../assets/avatar.svg" alt="">
+                        <ul class="meta list list-unstyled">
+                            <li class="name">Martin Pinto
+                                <label class="label label-info"><i class="fas fa-user"></i> Admin</label>
+                            </li>
+                        </ul>
+                    </div>
+                <nav class="side-menu">
+                  <ul class="nav">
+                    <li routerLinkActive="active">
+                        <a routerLink="/admin/orders">
+                            <span class="fa fa-shopping-cart"></span> Orders
+                        </a>
+                    </li>
+                    <li routerLinkActive="active">
+                        <a routerLink="/admin/users">
+                            <span class="fa fa-user"></span> Users
+                        </a>
+                    </li>
+                    <li routerLinkActive="active">
+                      <a routerLink="/admin/upload">
+                          <span class="fas fa-file-upload"></span> Uploads
+                      </a>
+                  </li>
+                    <li routerLinkActive="active">
+                      <a routerLink="/admin/movies">
+                          <span class="fas fa-video"></span> Movies
+                      </a>
+                  </li>
+                  <li routerLinkActive="active">
+                    <a routerLink="/admin/actors">
+                        <span class="fas fa-theater-masks"></span> Actors
+                    </a>
+                </li>
+                <li routerLinkActive="active">
+                  <a routerLink="/admin/genres">
+                      <span class="fa fa-film"></span> Genres
+                  </a>
+              </li>
+                </ul>
+              </nav>
+                </div>
+                <!-- Profile -->
+                <div class="content-panel">
+                    <form class="form-horizontal">
+                        <div class="col-md order-md-1 form-rent">
+                            <h4 class="mb-3">Users list</h4>
+                            <div class="d-flex justify-content-left h-100">
+                              <div class="searchbar">
+                                <input id="input-search" class="search_input" type="text" [(ngModel)]="searchUser" [ngModelOptions]="{standalone: true}" autocomplete="off" placeholder="Search by title, actor or genre...">
+                                  <a id="btnSearch" class="search_icon"><i class="fas fa-search"></i></a>
+                              </div>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">name</th>
+                                    <th scope="col">lastname</th>
+                                    <th scope="col">email</th>
+                                    <th scope="col">address</th>
+                                    <th scope="col">country</th>
+                                    <th scope="col">province</th>
+                                    <th scope="col">zip</th>
+                                    <th scope="col">options</th>
+                                  </tr>
+                                </thead>
+                                <tbody *ngFor="let user of users | filter:searchUser">
+                                  <tr>
+                                    <td>{{user.firstName}}</td>
+                                    <td>{{user.lastName}}</td>
+                                    <td class="email"><a href="mailto:{{user.email}}">{{user.email}}</a></td>
+                                    <td>{{user.address}}</td>
+                                    <td>{{user.country}}</td>
+                                    <td>{{user.province}}</td>
+                                    <td>{{user.zip}}</td>
+                                    <td><button class="btn-users" (click)="delete(user)"><i class="far fa-trash-alt"></i></button>
+                                      <!-- <button class="btn-users" (click)="edit(user)"><i class="far fa-edit"></i></button> -->
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
