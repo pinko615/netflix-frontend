@@ -137,8 +137,8 @@ tokeninterceptor.service.ts
 
 ## Screenshots 📷
 
-![netflix-angular](http://pink0.online/netflix2.jpg)
-![netflix-angular](http://pink0.online/netflix3.jpg)
+![netflix-angular2](http://pink0.online/netflix2.jpg)
+![netflix-angular3](http://pink0.online/netflix3.jpg)
 
 ## Author ✒️
 
