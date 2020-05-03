@@ -41,9 +41,12 @@ v1.0
 
 ## Developed with 🛠️
 
+* [VSCode]
 * [Angular]
+* [Typescript]
 * [Node]
 * [Bootstrap]
+* [GitHub]
 
 ## Dependencies ⚙️
 
@@ -92,39 +95,35 @@ v1.0
   }
 ```
 
-## Code Demo 🤓
+## Services ⚙️
 
-_Search by "?q=movieTitle"_
 ```
-const { Op } = Sequelize;
-app.get('/movies/search', function (request, response) {
-    let filter = {};
-    let { q } = request.query;
+auth.service.ts
+  private signUpUrl = 'http://localhost:3000/api/users/';
+  private loginUrl  = 'http://localhost:3000/api/auths/';
+  public role = '';
+  constructor(private http: HttpClient, private router: Router) { }
 
-    if (q) {
-        filter = {
-            where: {
-                title: {
-                    [Op.like]: `${q}%`
-                }
-            }
-        };
-    }
+  signUpUser(user) {
+    return this.http.post<any>(this.signUpUrl, user);
+  }
 
-    Movie.findAll(filter)
-    .then(movies => response.send(movies))
-    .catch(err =>{
-        console.log(err)
-        res.status(500).send({message:'error'})
-    });
-});
-```
+  loginUser(user) {
+    return this.http.post<any>(this.loginUrl, user);
+  }
 
-_1 cinema = many movies._
-```
-  Cinema.associate = function(models) {
-    Cinema.hasMany(models.Movie)
-  };
+  getToken() {
+    return localStorage.getItem('token');
+  }
+
+  isLogged() {
+    return !!localStorage.getItem('token');
+  }
+
+  logoutUser() {
+    localStorage.removeItem('token');
+    this.router.navigate(['/login']);
+  }
 ```
 
 ## Author ✒️
