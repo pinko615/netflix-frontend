@@ -99,10 +99,6 @@ v1.0
 
 ```
 auth.service.ts
-  private signUpUrl = 'http://localhost:3000/api/users/';
-  private loginUrl  = 'http://localhost:3000/api/auths/';
-  public role = '';
-  constructor(private http: HttpClient, private router: Router) { }
 
   signUpUser(user) {
     return this.http.post<any>(this.signUpUrl, user);
@@ -124,6 +120,42 @@ auth.service.ts
     localStorage.removeItem('token');
     this.router.navigate(['/login']);
   }
+```
+```
+movie.service.ts
+
+  getMovies() {
+    return this.http.get<any>(this.listMovieUrl);
+  }
+
+  getListActors() {
+    return this.http.get<any>(this.insertActorsUrl);
+  }
+
+  getPopularMovies() {
+    return this.http.get<any>(this.listPopularMovieUrl);
+  }
+
+  getPremiereMovies() {
+    return this.http.get<any>(this.listPremiereMovieUrl);
+  }
+
+  getMainPopularMovies() {
+    return this.http.get<any>(this.listMainPopularUrl);
+  }
+
+  getMainPopular() {
+    return this.http.get<any>(this.listMainPopular);
+  }
+
+  getMainHome() {
+    return this.http.get<any>(this.listMainHomeUrl);
+  }
+
+  getMainPremiere() {
+    return this.http.get<any>(this.listMainPremiereUrl);
+  }
+
 ```
 
 ## Author ✒️
