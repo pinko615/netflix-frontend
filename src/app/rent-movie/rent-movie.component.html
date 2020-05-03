@@ -52,9 +52,6 @@
             <div class="col-md-6 mb-3">
               <label for="email">Email</label>
               <input type="email" class="form-control" id="email" value="martin@gmail.com">
-              <div class="invalid-feedback">
-                Please enter a valid email address for shipping updates.
-              </div>
             </div>
           </div>
         <div class="row">
@@ -113,6 +110,6 @@
           </div>
         </div>
         <hr class="mb-4">
-        <button class="rent-btn btn-lg btn-block" type="submit" (click)="getMovie()">Continue to checkout</button>
+        <button class="rent-btn btn-lg btn-block" type="submit" routerLink="/thank-you">Continue to checkout</button>
       </form>
     </div>

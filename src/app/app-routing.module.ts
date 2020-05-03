@@ -26,6 +26,7 @@ import { UsersComponent } from './admin/users/users.component';
 import { MovieListComponent } from './admin/movie-list/movie-list.component';
 import { ActorListComponent } from './admin/actor-list/actor-list.component';
 import { GenreListComponent } from './admin/genre-list/genre-list.component';
+import { ThankYouComponent } from './thank-you/thank-you.component';
 
 
 
@@ -47,6 +48,7 @@ const routes: Routes = [
   { path: 'trending', component: TrendingComponent },
   { path: 'premiere', component: PremiereComponent },
   { path: 'my-orders', component: MyOrdersComponent },
+  { path: 'thank-you', component: ThankYouComponent },
   { path: 'genres', component: GenresComponent },
   { path: 'genres/action', component: ActionComponent },
   { path: 'genres/comedy', component: ComedyComponent },
