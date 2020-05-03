@@ -145,9 +145,17 @@ Home
 
 ![netflix-angular3](http://pink0.online/netflix5.jpg)
 
-Movies by genre
+Movies by Genre
 
 ![netflix-angular3](http://pink0.online/netflix4.jpg)
+
+Rent a movie
+
+![netflix-angular3](http://pink0.online/netflix6.jpg)
+
+Upload movies (role: admin)
+
+![netflix-angular3](http://pink0.online/netflix8.jpg)
 
 ## Author ✒️
 
