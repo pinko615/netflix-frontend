@@ -10,7 +10,7 @@
                                 <label class="label label-info"><i class="fas fa-globe-europe"></i> Valencia</label>
                             </li>
                             <li class="email">
-                              <p>martin@pinko.com</p>
+                              <p>martin@gmail.com</p>
                             </li>
                         </ul>
                     </div>
@@ -34,49 +34,34 @@
                                     <div class="row">
                                       <div class="col-md-6 mb-3">
                                         <label for="firstName">First name</label>
-                                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                                        <div class="invalid-feedback">
-                                          Valid first name is required.
-                                        </div>
+                                        <input type="text" class="form-control" id="firstName" placeholder="" value="Martin">
                                       </div>
                                       <div class="col-md-6 mb-3">
                                         <label for="lastName">Last name</label>
-                                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                                        <div class="invalid-feedback">
-                                          Valid last name is required.
-                                        </div>
+                                        <input type="text" class="form-control" id="lastName" placeholder="" value="Pinto">
                                       </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                           <label for="email">Email</label>
-                                          <input type="email" class="form-control" id="email" placeholder="" value="" required>
-                                          <div class="invalid-feedback">
-                                            Please enter a valid email address for shipping updates.
-                                          </div>
+                                          <input type="email" class="form-control" id="email" placeholder="" value="martin@gmail.com">
                                         </div>
                                           <div class="col-md-6 mb-3">
                                             <label for="address">Address</label>
-                                            <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
-                                            <div class="invalid-feedback">
-                                              Please enter your shipping address.
-                                            </div>
+                                            <input type="text" class="form-control" id="address" value="Jose Benlliure, 12">
                                           </div> 
                                         </div>
                                   <div class="row">
                                     <div class="col-md-5 mb-3">
                                       <label for="country">Country</label>
-                                      <select class="custom-select d-block w-100" id="country" required>
+                                      <select class="custom-select d-block w-100" id="country">
                                         <option>Spain</option>
                                       </select>
-                                      <div class="invalid-feedback">
-                                        Please select a valid country.
-                                      </div>
                                     </div>
                                     <div class="col-md-4 mb-3">
                                       <label for="province">Province</label>
-                                      <select class="custom-select d-block w-100" id="province" required>
-                                        <option value="">Choose...</option>
+                                      <select class="custom-select d-block w-100" id="province">
+                                        <option value="">Valencia</option>
                                         <option>Álava</option>
                                         <option>Albacete</option>
                                         <option>Alicante</option>
@@ -126,16 +111,10 @@
                                         <option>Zamora</option>
                                         <option>Zaragoza</option>
                                       </select>
-                                      <div class="invalid-feedback">
-                                          Please provide a valid state.
-                                        </div>
                                     </div>
                                     <div class="col-md-3 mb-3">
                                         <label for="zip">Zip</label>
-                                        <input type="text" class="form-control" id="zip" placeholder="" required>
-                                        <div class="invalid-feedback">
-                                            Zip code required.
-                                        </div>
+                                        <input type="text" class="form-control" id="zip" value="46011">
                                     </div>
                                     <div class="form-group">
                                         <div class="col-md-10 col-sm-9 col-xs-12 col-md-push-2 col-sm-push-3 col-xs-push-0">
@@ -148,45 +127,32 @@
                         
                                   <div class="d-block my-3">
                                     <div class="custom-control custom-radio">
-                                      <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                                      <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked>
                                       <label class="custom-control-label" for="credit">Credit card</label>
                                     </div>
                                     <div class="custom-control custom-radio">
-                                      <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                                      <input id="debit" name="paymentMethod" type="radio" class="custom-control-input">
                                       <label class="custom-control-label" for="debit">Debit card</label>
                                     </div>
                                   </div>
                                   <div class="row">
                                     <div class="col-md-6 mb-3">
                                       <label for="cc-name">Name on card</label>
-                                      <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                                      <small class="text-muted">Full name as displayed on card</small>
-                                      <div class="invalid-feedback">
-                                        Name on card is required
-                                      </div>
+                                      <input type="text" class="form-control" id="cc-name" value="Martin Pinto">
                                     </div>
                                     <div class="col-md-6 mb-3">
                                       <label for="cc-number">Credit card number</label>
-                                      <input type="text" class="form-control" id="cc-number" placeholder="" required>
-                                      <div class="invalid-feedback">
-                                        Credit card number is required
-                                      </div>
+                                      <input type="text" class="form-control" id="cc-number" value="**** **** **** 5432">
                                     </div>
                                   </div>
                                   <div class="row">
                                     <div class="col-md-3 mb-3">
                                       <label for="cc-expiration">Expiration</label>
-                                      <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                                      <div class="invalid-feedback">
-                                        Expiration date required
-                                      </div>
+                                      <input type="text" class="form-control" id="cc-expiration" value="**/**">
                                     </div>
                                     <div class="col-md-3 mb-3">
                                       <label for="cc-expiration">CVV</label>
-                                      <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                                      <div class="invalid-feedback">
-                                        Security code required
-                                      </div>
+                                      <input type="text" class="form-control" id="cc-cvv" value="***">
                                     </div>
                                 </div>
                             </form>
