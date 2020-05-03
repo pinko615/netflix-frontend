@@ -30,14 +30,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Firsts steps
 
-_You can download or clone this project to see the code of the entire website._
+You can download or clone this project to see the code of the entire website.
 ```
 git clone https://github.com/pinko615/GH-Proyecto-1-Netflix-Frontend.git
 ```
 
 ## Version 🖥
 
-_v1.0_
+v1.0
 
 ## Developed with 🛠️
 
@@ -65,8 +65,31 @@ _v1.0_
     "zone.js": "~0.10.2"
   }
 ```
+
+## devDependencies ⚙️
+
 ```
-npm install
+"devDependencies": {
+    "@angular-devkit/build-angular": "~0.901.0",
+    "@angular/cli": "~9.1.0",
+    "@angular/compiler-cli": "~9.1.0",
+    "@angular/language-service": "~9.1.0",
+    "@types/node": "^12.11.1",
+    "@types/jasmine": "~3.5.0",
+    "@types/jasminewd2": "~2.0.3",
+    "codelyzer": "^5.1.2",
+    "jasmine-core": "~3.5.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~4.4.1",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~2.1.0",
+    "karma-jasmine": "~3.0.1",
+    "karma-jasmine-html-reporter": "^1.4.2",
+    "protractor": "~5.4.3",
+    "ts-node": "~8.3.0",
+    "tslint": "~6.1.0",
+    "typescript": "~3.8.3"
+  }
 ```
 
 ## Code Demo 🤓
